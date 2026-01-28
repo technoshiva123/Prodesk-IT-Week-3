@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Detective | Battle Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="logo">dev<span>detective</span></h1>
+            <div class="mode-switch">
+                <button id="searchModeBtn" class="active-mode">Search</button>
+                <button id="battleModeBtn">Battle</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        <div id="searchSection" class="search-container">
+            <div class="search-bar">
+                <img src="https://img.icons8.com/ios-filled/50/4A90E2/search--v1.png" alt="search" class="search-icon">
+                <input type="text" id="usernameInput" placeholder="Enter GitHub username...">
+                <button id="searchBtn">Search</button>
+            </div>
+            <p class="welcome-text">Start by typing a developer's handle above!</p>
+        </div>
+
+        <div id="battleSection" class="search-container" style="display: none;">
+            <div class="battle-inputs">
+                <input type="text" id="user1Input" placeholder="Player 1 Username">
+                <span class="vs-text">VS</span>
+                <input type="text" id="user2Input" placeholder="Player 2 Username">
+            </div>
+            <button id="battleBtn" class="battle-go-btn">START BATTLE</button>
+        </div>
+
+        <main id="profileContainer"></main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

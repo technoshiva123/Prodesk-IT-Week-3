@@ -1,0 +1,257 @@
+:root {
+    --bg-dark: #141d2f;
+    --card-bg: #1e2a47;
+    --accent-blue: #0079ff;
+    --text-white: #ffffff;
+    --text-grey: #90a4d4;
+    --winner-green: #2ecc71;
+    --loser-red: #e74c3c;
+    --link-blue: #60abff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: transparent;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 17, 30, 0.85);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    width: 100%;
+    max-width: 730px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span {
+    color: var(--accent-blue);
+}
+
+.mode-switch {
+    display: flex;
+    gap: 5px;
+    background: var(--bg-dark);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.mode-switch button {
+    background: transparent;
+    border: none;
+    color: var(--text-grey);
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mode-switch button.active-mode {
+    background: var(--accent-blue);
+    color: white;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 730px;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-bar,
+.battle-inputs {
+    background: var(--card-bg);
+    padding: 12px 18px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.search-icon {
+    width: 24px;
+    opacity: 0.8;
+    margin-right: 10px;
+}
+
+.search-bar input,
+.battle-inputs input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+}
+
+.vs-text {
+    font-weight: 700;
+    color: var(--accent-blue);
+    padding: 0 10px;
+}
+
+.search-bar button,
+.battle-go-btn {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.battle-go-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.single-profile-card,
+.profile-card {
+    background: rgba(30, 42, 71, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.single-profile-card {
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.avatar-large {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.username-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+.dashboard-stats {
+    background: var(--bg-dark);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+.stat-label {
+    color: var(--text-grey);
+    font-size: 13px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-val {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.latest-repos-list a {
+    color: var(--link-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.latest-repos-list a:hover {
+    text-decoration: underline;
+}
+
+.battle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.winner-card {
+    border: 2px solid var(--winner-green) !important;
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.2);
+    opacity: 1 !important;
+}
+
+.loser-card {
+    border: 2px solid var(--loser-red) !important;
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.1);
+    opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+    .battle-grid {
+        grid-template-columns: 1fr;
+    }
+}
