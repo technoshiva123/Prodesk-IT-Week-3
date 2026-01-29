@@ -5,6 +5,10 @@ A high-performance GitHub profiling tool with real-time data visualization and c
 ![Full Site Preview](Preview.png)
 ![Full Site Preview](Preview2.png)
 
+## 📺 Project Demo
+
+[![Watch the video](https://img.shields.io/badge/Watch-Video-red?style=for-the-badge&logo=loom)](https://youtu.be/K0NJ3CfWxE8)
+
 ## 🚀 Features
 - 🔍 **Real-time Discovery:** Instant GitHub user fetching via REST API with detailed profile metrics.
 - 📊 **Repository Analytics:** Dynamic rendering of the top 5 latest repositories with direct navigation links.
